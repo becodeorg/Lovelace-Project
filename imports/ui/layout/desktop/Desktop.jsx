@@ -1,7 +1,7 @@
 import React from 'react'
 import DesktopContainer from '../../container/desktop/MainContainer/MainContainer'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import Root from '../../../container/desktop/Root/Root'
+import Home from '../../container/desktop/Home/Home'
 import Room from '../../container/desktop/Room/Room'
 
 const Desktop = () => (

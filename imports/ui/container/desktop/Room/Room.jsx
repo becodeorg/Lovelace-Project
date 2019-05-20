@@ -1,9 +1,11 @@
 import React from 'react'
 
-function Root() {
+function Room() {
     return (
         <div>
-            <h2>Root</h2>
+            <h2>Room</h2>
         </div>
     )
 }
+
+export default Room
