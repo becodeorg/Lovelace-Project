@@ -1,8 +1,6 @@
-import React from 'react';
+import React from 'react'
 import MobileContainer from '../../container/mobile/MainContainer/MainContainer'
 
-const Mobile = () => (
-    <MobileContainer />
-);
+const Mobile = () => <MobileContainer />
 
-export default Mobile;
+export default Mobile
