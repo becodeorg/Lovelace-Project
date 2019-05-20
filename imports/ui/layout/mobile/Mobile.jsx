@@ -1,9 +1,8 @@
 import React from 'react';
+import MobileContainer from '../../container/mobile/MainContainer/MainContainer'
 
 const Mobile = () => (
-    <div>
-        Mobile
-    </div>
+    <MobileContainer />
 );
 
 export default Mobile;

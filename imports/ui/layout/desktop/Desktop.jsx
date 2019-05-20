@@ -1,9 +1,8 @@
 import React from 'react';
+import DesktopContainer from '../../container/desktop/MainContainer/MainContainer'
 
 const Desktop = () => (
-    <div>
-        desktop
-    </div>
+    <DesktopContainer />
 );
 
 export default Desktop;
