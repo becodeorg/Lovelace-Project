@@ -1,4 +1,4 @@
-import React, { Framgent } from 'react'
+import React from 'react'
 import DesktopContainer from '../../container/desktop/MainContainer/MainContainer'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Home from '../../container/desktop/Home/Home'
