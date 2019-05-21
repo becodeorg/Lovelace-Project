@@ -32,7 +32,7 @@ const ResultPage = props => {
         <div>
             <Title>Result</Title>
             <Button onClick={() => nextQuestion()}>Next page</Button>
-            {current + 1 + ' / ' + questionNumber}
+            {current + 1 + ' / ' + questionNumber} page
         </div>
     )
 }
