@@ -3,9 +3,9 @@ import Button from '../../../components/CustomButtons/Button'
 import { Meteor } from 'meteor/meteor'
 import Alert from '../../../components/Alert/Alert'
 
-const ReadyPage = props => {
-    const startGame = () => {
-        Meteor.call('room.page', props.roomId, 0, false, err => {
+const EndPage = props => {
+    const resetGame = () => {
+        Meteor.call('room.page', props.roomId, null, err => {
             if (err) {
                 Alert({
                     query: 'Swal',
@@ -18,13 +18,12 @@ const ReadyPage = props => {
             }
         })
     }
-
     return (
         <Fragment>
-            <div>Ready ?</div>
-            <Button onClick={() => startGame()}>Go !</Button>
+            <div>EndPage</div>
+            <Button onClick={() => resetGame()}>Reset</Button>
         </Fragment>
     )
 }
 
-export default ReadyPage
+export default EndPage

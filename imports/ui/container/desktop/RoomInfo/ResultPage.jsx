@@ -4,11 +4,17 @@ import Title from '../../../components/Typography/Title'
 import Button from '../../../components/CustomButtons/Button'
 import Alert from '../../../components/Alert/Alert'
 
-const QuestionPage = props => {
+const ResultPage = props => {
     const { question, name, current, questionNumber, roomId } = props
 
     const nextQuestion = () => {
-        Meteor.call('room.page', roomId, current, true, err => {
+        let page = null
+        if (current + 1 >= questionNumber) {
+            page = 'end'
+        } else {
+            page = current + 1
+        }
+        Meteor.call('room.page', roomId, page, false, err => {
             if (err) {
                 Alert({
                     query: 'Swal',
@@ -24,12 +30,11 @@ const QuestionPage = props => {
 
     return (
         <div>
-            <Title>{name}</Title>
-            <QuestionCard question={question} />
+            <Title>Result</Title>
             <Button onClick={() => nextQuestion()}>Next page</Button>
             {current + 1 + ' / ' + questionNumber}
         </div>
     )
 }
 
-export default QuestionPage
+export default ResultPage

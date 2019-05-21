@@ -2,32 +2,46 @@ import React from 'react'
 import RoomApi from '../../../../api/room'
 import Spinner from '../../../components/Loader/Spinner'
 import { withTracker } from 'meteor/react-meteor-data'
-import Button from '../../../components/CustomButtons/Button'
-import Title from '../../../components/Typography/Title'
-import Alert from '../../../components/Alert/Alert'
-import UserCard from './UserCard'
-import QuestionCard from './QuestionCard'
 import { withStyles } from '@material-ui/core'
 import RoomInfoStyle from './RoomInfoStyle'
 import ReadyPage from './ReadyPage'
+import EndPage from './EndPage'
 import QuestionPage from './QuestionPage'
+import ResultPage from './ResultPage'
 import { compose } from 'recompose'
 
 const RoomStart = props => {
-    const { loading, rooms, classes, match } = props
+    const { loading, rooms, classes } = props
 
     if (loading && rooms && rooms.length === 1) {
-        const questionId = match.params.questionId
         const room = rooms[0]
-        if (questionId === 'start') {
-            return <ReadyPage />
+        const current = room.current
+        if (!current && current !== 0) {
+            return <ReadyPage roomId={room._id} />
+        } else if (current === 'end') {
+            return <EndPage roomId={room._id} />
+        } else {
+            if (room.displayAnswers) {
+                return (
+                    <ResultPage
+                        name={room.name}
+                        roomId={room._id}
+                        question={room.question[current]}
+                        questionNumber={room.question.length}
+                        current={current}
+                    />
+                )
+            } else {
+                return (
+                    <QuestionPage
+                        roomId={room._id}
+                        question={room.question[current]}
+                        questionNumber={room.question.length}
+                        current={current}
+                    />
+                )
+            }
         }
-        return (
-            <QuestionPage
-                name={room.name}
-                question={room.question[questionId]}
-            />
-        )
     } else {
         return <Spinner />
     }
