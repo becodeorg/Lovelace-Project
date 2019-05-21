@@ -13,7 +13,6 @@ const Room = props => {
         const room = {
             name: e.target.roomName.value,
         }
-        console.log(room)
         Meteor.call('room.add', room, err => {
             if (err) {
                 Alert({
@@ -27,7 +26,7 @@ const Room = props => {
             }
         })
     }
-    console.log(props)
+
     return (
         <div>
             <h2>Room</h2>
