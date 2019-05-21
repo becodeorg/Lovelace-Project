@@ -1,6 +1,20 @@
 import React from 'react'
-import MobileContainer from '../../container/mobile/MainContainer/MainContainer'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import routes from '../../router/routeMobile'
 
-const Mobile = () => <MobileContainer />
+const Mobile = () => (
+    <Router basename={'mobile'}>
+        {routes.map(({ component, name, path, exact }) => {
+            return (
+                <Route
+                    path={path}
+                    component={component}
+                    key={name}
+                    exact={exact}
+                />
+            )
+        })}
+    </Router>
 
+) 
 export default Mobile
