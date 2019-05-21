@@ -1,29 +1,26 @@
 /* games : [ 
     { 
-        id : , 
-        name : , 
+        id : , // salon
+        name : , // nom de la partie
         users : [ 
             { 
-                id : ,
-                name : ,
+                id : , // id de l'user
+                === name : , // pseudo
                 scoreTotal: , 
                 answers : [ 
                     { 
                         id:
-                        response: true/false
-                        timing : 
-                    }, 
-                    {
-                        id:
-                        response: true/false
-                        timing : 
-                    },
-                    {
-                        id:
-                        response: true/false
-                        timing : 
-                    }  
+                        response: 
+                        timestamp:
+                    } 
                 ]
+            }
+        ],
+        questions: [
+            {
+                title: "ceci est le titre de la question",
+                description: "ceci est le titre de la test"
+                
             }
         ]
     }
