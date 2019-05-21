@@ -1,18 +1,19 @@
 import React from 'react'
-import MainContainer from '../../container/mobile/MainContainer/MainContainer'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import RoomPlayers from '../../container/mobile/HomeMobile/RoomPlayers'
-import Question from '../../container/mobile/MobileQuestion/Question'
-import Podium from '../../container/mobile/Podium/Podium'
-// import LandingPage from '../../layout/LandingPage/LandingPage'
+import routes from '../../router/routeMobile'
 
 const Mobile = () => (
-    <Router basename={'admin'}>
-        <MainContainer/>
-        {/* <Route exact path="/" component={LandingPage} /> */}
-        <Route path="/roomplayers" component={RoomPlayers} />
-        <Route path="/question/:question_id" component={Question} />
-        <Route path="/podium" component={Podium} />
+    <Router basename={'mobile'}>
+        {routes.map(({ component, name, path, exact }) => {
+            return (
+                <Route
+                    path={path}
+                    component={component}
+                    key={name}
+                    exact={exact}
+                />
+            )
+        })}
     </Router>
 )
 export default Mobile
