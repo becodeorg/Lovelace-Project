@@ -4,6 +4,7 @@ import Spinner from '../../../components/Loader/Spinner'
 import { withTracker } from 'meteor/react-meteor-data'
 import Button from '../../../components/CustomButtons/Button'
 import Alert from '../../../components/Alert/Alert'
+import { Link } from 'react-router-dom'
 
 const Room = props => {
     const { loading, rooms } = props
@@ -40,7 +41,14 @@ const Room = props => {
                 <div>
                     {rooms &&
                         rooms.map((room, index) => (
-                            <div key={`room/${index}`}>{room.name}</div>
+                            <div key={`room/${index}`}>
+                                {room.name}
+                                <Link to={`/room/${room._id}`}>
+                                    <Button className="primary">
+                                        Go to room
+                                    </Button>
+                                </Link>
+                            </div>
                         ))}
                 </div>
             ) : (
