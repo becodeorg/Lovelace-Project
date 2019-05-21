@@ -9,6 +9,10 @@ if (Meteor.isServer) {
     Meteor.publish('rooms', () => {
         return Room.find({})
     })
+    Meteor.publish('room._id', rommId => {
+        check(rommId, String)
+        return Room.find({_id: rommId})
+    })
     Meteor.methods({
         'room.add'(room) {
             check(room, Match.Any)

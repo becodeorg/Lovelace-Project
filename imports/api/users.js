@@ -8,6 +8,10 @@ if (Meteor.isServer) {
     Meteor.publish('allUsers', () => {
         return Meteor.users.find({})
     })
+    Meteor.publish('user._id', userId => {
+        check(userId, String)
+        return Meteor.users.find({_id: userId})
+    })
     Meteor.methods({
         'user.avatar'(userId, avatar) {
             check(userId, String)
