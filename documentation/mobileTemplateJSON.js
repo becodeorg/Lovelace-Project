@@ -1,27 +1,23 @@
-/* games : [ 
-    { 
-        id : , // salon
-        name : , // nom de la partie
-        users : [ 
-            { 
-                id : , // id de l'user
-                === name : , // pseudo
-                scoreTotal: , 
-                answers : [ 
-                    { 
-                        id:
-                        response: 
-                        timestamp:
-                    } 
-                ]
-            }
-        ],
-        questions: [
+games: [
+    {
+        id: '123456', // salon
+        name: 'react', // nom de la partie
+        current: '1234567890',
+        displayAnswers: false,
+        question: [
             {
-                title: "ceci est le titre de la question",
-                description: "ceci est le titre de la test"
-                
-            }
-        ]
-    }
-] */
+                id: '1234567890',
+                createdAt: 123456789,
+                title: 'ceci est un titre',
+                description: 'ceci est un titre',
+                answers: [
+                    {
+                        id: 'azertyhn,;vd;s,k',
+                        response: 1,
+                        timestamp: 1234567890765,
+                    },
+                ],
+            },
+        ],
+    },
+]
