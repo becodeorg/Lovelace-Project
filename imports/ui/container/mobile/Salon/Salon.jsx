@@ -1,4 +1,4 @@
-const room =
+const salon =
     {
         id: '123456', // salon
         name: 'react', // nom de la partie
@@ -13,7 +13,7 @@ const room =
                 description: 'ceci est un titre',
                 answers: [
                     {
-                        id: 'azertyhn,;vd;s,k',
+                        id: '1234567',
                         response: 1,
                         answersAt: 1234567890765,
                     },
@@ -22,3 +22,4 @@ const room =
         ],
     },
 
+export default salon;
