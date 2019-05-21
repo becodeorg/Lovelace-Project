@@ -25,6 +25,8 @@ const RoomStart = props => {
                 return (
                     <ResultPage
                         name={room.name}
+                        displayAnswers={room.displayAnswers}
+                        displayAnswers={room.displayAnswers}
                         roomId={room._id}
                         question={room.question[current]}
                         questionNumber={room.question.length}
@@ -34,6 +36,7 @@ const RoomStart = props => {
             } else {
                 return (
                     <QuestionPage
+                        displayAnswers={room.displayAnswers}
                         roomId={room._id}
                         question={room.question[current]}
                         questionNumber={room.question.length}
