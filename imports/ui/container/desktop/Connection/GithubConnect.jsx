@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from '../../../components/CustomButtons/Button'
 import { Meteor } from 'meteor/meteor'
+import { secondaryColor } from '../../../style/constant'
 
 const GithubConnection = () => {
     const loginWithGithub = () => {
@@ -21,8 +22,9 @@ const GithubConnection = () => {
 
     return (
         <div>
-            <Button color="github" onClick={() => loginWithGithub()}>
-                Login with github
+            <Button color="secondary" onClick={() => loginWithGithub()}>
+                GITHUB 
+                <i class="fab fa-github"></i>
             </Button>
         </div>
     )

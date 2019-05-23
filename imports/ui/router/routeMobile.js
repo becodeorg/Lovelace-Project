@@ -1,7 +1,7 @@
 // import LandingPage from '../layout/LandingPage/LandingPage'
 import RoomPlayers from '../container/mobile/HomeMobile/RoomPlayers'
-import Question from '../container/mobile/MobileQuestion/Question'
-import Podium from '../container/mobile/Podium/Podium'
+// import Question from '../container/mobile/MobileQuestion/Question'
+// import Podium from '../container/mobile/Podium/Podium'
 
 const routeMobile = [
     // { path: '/', name: 'LandingPage', component: LandingPage, exact: true }
