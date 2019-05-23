@@ -18,7 +18,8 @@ const RoomStart = props => {
         const room = rooms[0]
         return (
             <div>
-                <Title centered>{room.title}</Title>
+                <Title centered>{room.name}</Title>
+                <Title centered>{room.usersjoined.length}</Title>
                 <div className={classes.usersPart}>
                     {room.usersjoined.map(userId => (
                         <UserCard key={`user/${userId}`} userId={userId} />
@@ -29,14 +30,6 @@ const RoomStart = props => {
                         Start Game !
                     </Button>
                 </Link>
-                {/* <div className={classes.QuestionPart}>
-                    {room.question.map(question => (
-                        <QuestionCard
-                            key={`question/${question.id}`}
-                            question={question}
-                        />
-                    ))}
-                </div> */}
             </div>
         )
     } else {
