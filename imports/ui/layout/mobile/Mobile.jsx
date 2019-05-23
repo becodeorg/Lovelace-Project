@@ -15,6 +15,5 @@ const Mobile = () => (
             )
         })}
     </Router>
-
-) 
+)
 export default Mobile

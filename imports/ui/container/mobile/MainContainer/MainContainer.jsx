@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from '../../../components/Typography/Title'
-import RoomPlayers from '../HomeMobile/RoomPlayers';
+import RoomPlayers from '../HomeMobile/RoomPlayers'
 
 const MainContainer = () => (
     <div>
